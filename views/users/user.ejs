@@ -1,0 +1,14 @@
+<%- include("../partials/header", {title: "User Details"}) %>
+<body>
+    <h2>User Detail</h2>
+    <p>My First Name is <%= item?.first_name %> and Last Name is <%= item?.last_name %></p>
+    <h2>Create new User?</h2>
+    <form action="/users" method="post">
+        <input type="email" placeholder="email" name="email" value="a@a.com"/>
+        <input type="text" placeholder="First Name" name="first_name" value="John"/>
+        <input type="submit" value="Create new User" />
+    </form>
+    <a href="/users" >go to users page</a>
+    <script src="js/users.js"></script>
+</body>
+</html>

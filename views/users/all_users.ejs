@@ -1,0 +1,17 @@
+<%- include("../partials/header", {title: "All Users"}) %>
+<body>
+    <div class="background-color">
+        <ul>
+            <!-- users is an array -->
+            <% users.forEach(function (user) {%>
+                <button onclick="clickUser(<%= JSON.stringify(user) %>)">Click</button>
+                <li>First Name: <%= user.first_name %></li>
+                <li>Last Name: <%= user.last_name %></li>
+                <a href="/users/<%= user._id %>">Indiviual User Page</a>
+                <!-- users/614dbc3d1d67f9f3ecb3153b -->
+            <% }) %>
+        </ul>
+    </div>
+    <script src="js/users.js"></script>
+</body>
+</html>
